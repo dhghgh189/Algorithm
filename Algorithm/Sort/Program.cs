@@ -12,9 +12,13 @@
             //SelectionSort.Sort(array2);
             //SelectionSort.Sort(array3);
 
-            InsertionSort.Sort(array);
-            InsertionSort.Sort(array2);
-            InsertionSort.Sort(array3);
+            //InsertionSort.Sort(array);
+            //InsertionSort.Sort(array2);
+            //InsertionSort.Sort(array3);
+
+            BubbleSort.Sort(array);
+            BubbleSort.Sort(array2);
+            BubbleSort.Sort(array3);
 
             foreach (int i in array)
             {
