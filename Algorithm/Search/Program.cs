@@ -11,17 +11,17 @@
             //Console.WriteLine($"Binary Search ({target}) : index {BinarySearch.Search(array2, target, 0, array2.Length-1)}");
 
             Graph graph = new Graph(7);
-            graph.Connect(0, 1);    graph.Connect(0, 3);
-            graph.Connect(1, 0);    graph.Connect(1, 2);
-            graph.Connect(2, 1);    graph.Connect(2, 3);    graph.Connect(2, 4);    graph.Connect(2, 5);
-            graph.Connect(3, 0);    graph.Connect(3, 2);
-            graph.Connect(4, 2);    graph.Connect(4, 6);
-            graph.Connect(5, 2);
-            graph.Connect(6, 4);
+            graph.Connect(0, 1);    graph.Connect(0, 2);    graph.Connect(0, 3);
+            graph.Connect(1, 0);    graph.Connect(1, 2);    graph.Connect(1, 4);    graph.Connect(1, 5);
+            graph.Connect(2, 0);    graph.Connect(2, 1);    graph.Connect(2, 3);    graph.Connect(2, 4);
+            graph.Connect(3, 0);    graph.Connect(3, 2);    graph.Connect(3, 4);    graph.Connect(3, 6);
+            graph.Connect(4, 1);    graph.Connect(4, 2);    graph.Connect(4, 3);    graph.Connect(4, 6);
+            graph.Connect(5, 1);    graph.Connect(5, 6);
+            graph.Connect(6, 3);    graph.Connect(6, 4);    graph.Connect(6, 5);
 
-            DFS.Search(graph, 0);
-            Console.WriteLine("=====================");
             DFS.Search(graph, 0, out bool[] visited, out int[] parent);
+            Console.WriteLine("=====================");
+            BFS.Search(graph, 0, out visited, out parent);
         }
     }
 }
