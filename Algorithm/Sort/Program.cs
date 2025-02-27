@@ -21,40 +21,51 @@
             //BubbleSort.Sort(array2);
             //BubbleSort.Sort(array3);
 
-            //foreach (int i in array)
-            //{
-            //    Console.Write($"{i} ");
-            //}
-            //Console.WriteLine();
+            MergeSort.Sort(array, 0, array.Length-1);
+            MergeSort.Sort(array2, 0, array2.Length-1);
+            MergeSort.Sort(array3, 0, array3.Length-1);
+            MergeSort.Sort(array4, 0, array4.Length-1);
 
-            //foreach (int i in array2)
-            //{
-            //    Console.Write($"{i} ");
-            //}
-            //Console.WriteLine();
-
-            //foreach (int i in array3)
-            //{
-            //    Console.Write($"{i} ");
-            //}
-            //Console.WriteLine();
-
-            Random rand = new Random();
-            int[] array5 = new int[10];
-            for (int i = 0; i < array5.Length; i++)
-            {
-                int number = rand.Next(1, 101);
-                Console.Write($"{number} ");
-                array5[i] = number;
-            }
-            Console.WriteLine("\n");
-
-            QuickSort.Sort(array5, 0, array5.Length-1);
-            foreach (int i in array5)
+            foreach (int i in array)
             {
                 Console.Write($"{i} ");
             }
             Console.WriteLine();
+
+            foreach (int i in array2)
+            {
+                Console.Write($"{i} ");
+            }
+            Console.WriteLine();
+
+            foreach (int i in array3)
+            {
+                Console.Write($"{i} ");
+            }
+            Console.WriteLine();
+
+            foreach (int i in array4)
+            {
+                Console.Write($"{i} ");
+            }
+            Console.WriteLine();
+
+            //Random rand = new Random();
+            //int[] array5 = new int[10];
+            //for (int i = 0; i < array5.Length; i++)
+            //{
+            //    int number = rand.Next(1, 101);
+            //    Console.Write($"{number} ");
+            //    array5[i] = number;
+            //}
+            //Console.WriteLine("\n");
+
+            //QuickSort.Sort(array5, 0, array5.Length-1);
+            //foreach (int i in array5)
+            //{
+            //    Console.Write($"{i} ");
+            //}
+            //Console.WriteLine();
         }
     }
 }
