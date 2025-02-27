@@ -5,7 +5,7 @@
         public static void Sort(int[] array, int start, int end)
         {
             // 리스트 요소가 1개 이하면 종료
-            if (start > end)
+            if (start >= end)
                 return;
 
             // start ~ end 범위의 요소들을 분할한다.
