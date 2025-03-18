@@ -20,17 +20,21 @@ namespace Search
             // 스택에 정점이 있는 동안 반복
             while (stack.Count > 0)
             {
+                Console.WriteLine("Search1 Count");
+
                 // 현재 방문할 정점을 pop
                 current = stack.Pop();
 
-                // 방문 기록
-                if (!visited[current])
-                {
-                    visited[current] = true;
-                    Console.WriteLine(current);
-                }
+                // 이미 방문한 지점이면 pass
+                if (visited[current])
+                    continue;
 
-                for (int i = 0; i < size; i++)
+                // 방문 기록
+                visited[current] = true;
+                Console.WriteLine(current);
+
+                // 역순으로 확인하여 빠른 정점부터 체크할 수 있도록 함
+                for (int i = size - 1; i >= 0; i--)
                 {
                     // 인접한 정점 중 방문하지 않은 정점을 stack에 저장
                     if (!visited[i] && graph.IsConnected(current, i))
